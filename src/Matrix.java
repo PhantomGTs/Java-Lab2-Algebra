@@ -29,7 +29,7 @@ public class Matrix<T> {
         int p = other.elements.length;
 
         if (this.elements[0].length != p) {
-            throw new IllegalArgumentException("Incompatible matrix dimensions");
+            throw new IllegalArgumentException("Разные размеры матриц");
         }
 
         T[][] result = createArray(m, n, (Class<T>) this.elements[0][0].getClass());

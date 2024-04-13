@@ -12,7 +12,7 @@ public class MultiplicationGroup implements Group<Double> {
     @Override
     public Double inverse(Double a) {
         if (a == 0) {
-            throw new ArithmeticException("Cannot find inverse of zero");
+            throw new ArithmeticException("Невозможно найти обратное значение нуля");
         }
         return 1.0 / a; // Обратный элемент для умножения
     }
