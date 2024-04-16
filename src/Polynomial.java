@@ -35,3 +35,4 @@ public class Polynomial<T> {
         return new Polynomial<>(resultCoefficients, ring);
     }
 }
+// Сделать так, чтобы моно было поставить полином в матрицу и матрицу в полином 

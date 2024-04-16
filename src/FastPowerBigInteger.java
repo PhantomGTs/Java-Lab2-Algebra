@@ -22,3 +22,5 @@ public class FastPowerBigInteger {
         return result;
     }
 }
+
+//Добавить тест FastOperation
