@@ -1,3 +1,5 @@
+package lab2_v1;
+
 import java.math.BigInteger;
 
 public class FastPowerBigInteger {

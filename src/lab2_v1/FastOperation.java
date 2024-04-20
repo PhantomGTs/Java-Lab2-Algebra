@@ -1,3 +1,5 @@
+package lab2_v1;
+
 class FastOperation<T extends Number> {
     private Monoid<T> monoid;
 

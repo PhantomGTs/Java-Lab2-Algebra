@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class PrefixSum {
     private int[] prefixSum;
 

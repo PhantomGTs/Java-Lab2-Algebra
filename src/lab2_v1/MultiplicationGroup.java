@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class MultiplicationGroup implements Group<Double> {
     @Override
     public Double identity() {

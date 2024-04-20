@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class MultiplyMonoid implements Monoid<Integer> {
     public Integer identity() {
         return 1;

@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public interface Monoid<T> {
     T identity(); // Нейтральный элемент
 

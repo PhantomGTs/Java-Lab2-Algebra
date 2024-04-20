@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class AdditionGroup implements Group<Integer> {
     @Override
     public Integer identity() {

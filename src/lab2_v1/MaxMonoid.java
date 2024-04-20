@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class MaxMonoid implements Monoid<Integer> {
     @Override
     public Integer identity() {

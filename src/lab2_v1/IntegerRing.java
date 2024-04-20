@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class IntegerRing implements Ring<Integer> {
     @Override
     public Integer identity() {

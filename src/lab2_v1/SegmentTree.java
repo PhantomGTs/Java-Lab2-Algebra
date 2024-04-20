@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class SegmentTree<T> {
     private T[] tree;
     private Monoid<T> monoid;

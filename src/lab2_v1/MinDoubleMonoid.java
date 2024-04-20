@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class MinDoubleMonoid implements Monoid<Double> {
     @Override
     public Double identity() {

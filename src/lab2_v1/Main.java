@@ -1,3 +1,5 @@
+package lab2_v1;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +11,7 @@ public class Main {
         System.out.println("=== Моноиды ===");
 
         // Пример использования моноидов
-        // 1.1 Реализация интерфейса Monoid
+        // 1.1 Реализация интерфейса lab2_v1.Monoid
         Monoid<Integer> maxMonoid = new MaxMonoid();
         Monoid<Double> minDoubleMonoid = new MinDoubleMonoid();
 
@@ -57,7 +59,7 @@ public class Main {
         // Пункт 2: Группы
         System.out.println("\n=== Группы ===");
 
-        // 2.1 Реализация интерфейса Group
+        // 2.1 Реализация интерфейса lab2_v1.Group
         Group<Integer> additionGroup = new AdditionGroup();
         Group<Double> multiplicationGroup = new MultiplicationGroup();
 
@@ -152,9 +154,14 @@ public class Main {
 }
 
 /*
-* 1. Сделать подсчет разницы FastOperation/FastPowerBigInteger - DONE
-* 2. Сделать так, чтобы можно было поставить полином в матрицу и матрицу в полином Polynomial.java - DONE
+* 1. Сделать подсчет разницы lab2_v1.FastOperation/lab2_v1.FastPowerBigInteger - DONE
+* 2. Сделать так, чтобы можно было поставить полином в матрицу и матрицу в полином lab2_v1.Polynomial.java - DONE
 * 3. Полином наследуется от матрицы - DONE
 * 3.1 (Под вопросом) в матрице сделать метод какой-нибудь для обратного преобразования - DONE
+* */
+
+/*
+* 4. Матрица не должна существовать сама по себе
+*
 * */
 

@@ -1,3 +1,5 @@
+package lab2_v1;
+
 public class BooleanRing implements Ring<Boolean> {
     @Override
     public Boolean identity() {
