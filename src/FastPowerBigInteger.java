@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+
 public class FastPowerBigInteger {
     private MultiplyBigIntegerMonoid multiplyMonoid;
 
@@ -22,5 +23,3 @@ public class FastPowerBigInteger {
         return result;
     }
 }
-
-//Добавить тест FastOperation

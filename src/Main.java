@@ -106,12 +106,55 @@ public class Main {
         }
 
         System.out.println("Полином А * Полином Б: " + polynomialC.getCoefficients());
+
+        System.out.println("\n=== Преобразование ===");
+        System.out.println("=== (Дополнительно) ===");
+
+        // Преобразование полинома в матрицу
+        Matrix<Integer> polynomialMatrix = polynomialA.toMatrix();
+
+        // Вывод элементов матрицы
+        System.out.println("Матрица, полученная из полинома A:");
+        for (Integer[] row : polynomialMatrix.getElements()) {
+            for (Integer element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+
+        // Преобразование матрицы обратно в полином
+        Polynomial<Integer> convertedPolynomialA = polynomialMatrix.toPolynomial();
+
+        // Вывод коэффициентов полинома
+        System.out.println("Полином, полученный из матрицы A: " + convertedPolynomialA.getCoefficients());
+        printPolynomial(convertedPolynomialA.getCoefficients());
+
+    }
+
+    // Вывод палинома
+    private static void printPolynomial(List<Integer> coefficients) {
+        int degree = coefficients.size() - 1;
+        System.out.print("P(x) = ");
+        for (int i = degree; i >= 0; i--) {
+            if (coefficients.get(i) != 0) {
+                if (i == 0) {
+                    System.out.print(coefficients.get(i));
+                } else {
+                    System.out.print(coefficients.get(i) + " * x^" + i);
+                }
+                if (i != 0) {
+                    System.out.print(" + ");
+                }
+            }
+        }
+        System.out.println();
     }
 }
 
 /*
-* 1. Сделать подсчет разницы FastOperation/FastPowerBigInteger
-* 2. Сделать так, чтобы можно было поставить полином в матрицу и матрицу в полином Polynomial.java
-* 3. Полином наследуется от матрицы
-* 3.1 (Под вопросом) в матрице сделать метод какой-нибудь для обратного преобразования
+* 1. Сделать подсчет разницы FastOperation/FastPowerBigInteger - DONE
+* 2. Сделать так, чтобы можно было поставить полином в матрицу и матрицу в полином Polynomial.java - DONE
+* 3. Полином наследуется от матрицы - DONE
+* 3.1 (Под вопросом) в матрице сделать метод какой-нибудь для обратного преобразования - DONE
 * */
+
