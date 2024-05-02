@@ -74,10 +74,19 @@ public class Matrix<T> {
         return new Polynomial<>(polyCoefficients, ring);
     }
 
+    public void printMatrix() {
+        for (T[] row : elements) {
+            for (T element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
     /* toPolynomial
      * 1. Создается новый список polyCoefficients, который будет содержать коэффициенты полинома.
      * 2. В цикле происходит итерация по элементам матрицы elements. При этом берется элемент с индексом i из каждой строки и добавляется в список polyCoefficients в качестве коэффициента.
      * 3. Создается новый объект полинома, используя полученные коэффициенты и кольцо ring, и возвращается в качестве результата.
      * */
-
 }

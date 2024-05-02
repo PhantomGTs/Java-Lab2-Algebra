@@ -1,8 +1,11 @@
-package lab2_v2;
+import lab2_v1.*;
+
 
 public class Main {
     public static void main(String[] args)
     {
 
+
     }
+
 }

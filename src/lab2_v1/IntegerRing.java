@@ -1,6 +1,6 @@
 package lab2_v1;
 
-public class IntegerRing implements Ring<Integer> {
+public class IntegerRing implements Monoid<Integer>, Group<Integer> {
     @Override
     public Integer identity() {
         return 0;
@@ -15,9 +15,5 @@ public class IntegerRing implements Ring<Integer> {
     public Integer inverse(Integer a) {
         return -a;
     }
-
-    @Override
-    public Integer multiply(Integer a, Integer b) {
-        return a * b;
-    }
 }
+

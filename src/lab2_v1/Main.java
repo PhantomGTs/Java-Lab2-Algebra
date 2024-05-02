@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -79,10 +80,11 @@ public class Main {
         System.out.println("\n=== Кольца ===");
 
         // 3.1 Реализация кольца из моноида и группы
-        Ring<Integer> integerRing = new IntegerRing();
+
+        Ring<Integer> integerRing = new Ring<>(new IntegerRing(), new IntegerRing());
 
         // 3.2 Реализация кольца над логическими значениями
-        Ring<Boolean> booleanRing = new BooleanRing();
+        Ring<Boolean> booleanRing = new Ring<>(new BooleanRing(), new BooleanRing());
 
         // 3.3 Реализация матрицы над кольцами
         Integer[][] matrix1 = {{1, 2}, {3, 4}};
