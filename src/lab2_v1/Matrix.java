@@ -48,7 +48,10 @@ public class Matrix<T> {
         // Умножение матриц
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                result[i][j] = ring.identity(); // Инициализация элемента результата
+                // Инициализация элемента результата
+                result[i][j] = ring.identity();
+
+                // Умножение элементов матриц
                 for (int k = 0; k < p; k++) {
                     // Вычисление элемента результата как суммы произведений элементов
                     result[i][j] = ring.operate(result[i][j], ring.multiply(this.elements[i][k], other.elements[k][j]));
@@ -59,6 +62,7 @@ public class Matrix<T> {
         // Возвращение результата умножения в виде новой матрицы
         return new Matrix<>(result, ring, (Class<T>) this.elements[0][0].getClass());
     }
+
 
     // Метод для преобразования полинома в матрицу
     public Polynomial<T> toPolynomial() {

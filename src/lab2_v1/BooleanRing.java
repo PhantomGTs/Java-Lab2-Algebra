@@ -8,11 +8,14 @@ public class BooleanRing implements Monoid<Boolean>, Group<Boolean> {
 
     @Override
     public Boolean operate(Boolean a, Boolean b) {
-        return a && b; // Логическое И как операция сложения
+        return a || b; // Логическое И как операция сложения
     }
 
     @Override
     public Boolean inverse(Boolean a) {
         return !a; // Отрицание как операция взятия обратного элемента
+    }
+    public Boolean multiply(Boolean a, Boolean b) {
+        return a && b; // Логическое ИЛИ как операция умножения
     }
 }

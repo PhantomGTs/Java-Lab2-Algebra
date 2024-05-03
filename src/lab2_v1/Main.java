@@ -84,7 +84,11 @@ public class Main {
         Ring<Integer> integerRing = new Ring<>(new IntegerRing(), new IntegerRing());
 
         // 3.2 Реализация кольца над логическими значениями
-        Ring<Boolean> booleanRing = new Ring<>(new BooleanRing(), new BooleanRing());
+        //Ring<Boolean> booleanRing = new Ring<>(new BooleanRing(), new BooleanRing());
+
+        BooleanRing booleanRing = new BooleanRing();
+        System.out.println("Логическое ИЛИ: " + booleanRing.operate(true, false));
+        System.out.println("Логическое И: " + booleanRing.multiply(true, false));
 
         // 3.3 Реализация матрицы над кольцами
         Integer[][] matrix1 = {{1, 2}, {3, 4}};
@@ -92,6 +96,7 @@ public class Main {
         Matrix<Integer> matrixA = new Matrix<>(matrix1, integerRing, Integer.class);
         Matrix<Integer> matrixB = new Matrix<>(matrix2, integerRing, Integer.class);
         Matrix<Integer> matrixC = matrixA.multiply(matrixB);
+
 
         // 3.4 Реализация полинома над кольцами
         List<Integer> poly1 = new ArrayList<>(List.of(1, 2, 3));
