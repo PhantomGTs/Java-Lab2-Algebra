@@ -15,7 +15,15 @@ public class BooleanRing implements Monoid<Boolean>, Group<Boolean> {
     public Boolean inverse(Boolean a) {
         return !a; // Отрицание как операция взятия обратного элемента
     }
+
+    @Override
+    public Boolean add(Boolean a, Boolean b) {
+        return a || b; // Операция сложения
+    }
+
     public Boolean multiply(Boolean a, Boolean b) {
-        return a && b; // Логическое ИЛИ как операция умножения
+        return a && b; // Операция умножения
     }
 }
+
+

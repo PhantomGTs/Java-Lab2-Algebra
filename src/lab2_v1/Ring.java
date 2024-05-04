@@ -27,7 +27,13 @@ public class Ring<T> implements Group<T> {
     public T multiply(T a, T b) {
         return multiplicationMonoid.operate(a, b);
     }
+
+    @Override
+    public T add(T a, T b) {
+        return additionGroup.add(a, b); // Реализация метода сложения
+    }
 }
+
 
 
 

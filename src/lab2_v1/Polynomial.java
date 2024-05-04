@@ -23,6 +23,7 @@ public class Polynomial<T> {
         int m = this.coefficients.size();
         int n = other.coefficients.size();
 
+        // Вычисление степени результирующего полинома
         List<T> resultCoefficients = new ArrayList<>(m + n - 1);
 
         // Инициализация списка коэффициентов результата нулями

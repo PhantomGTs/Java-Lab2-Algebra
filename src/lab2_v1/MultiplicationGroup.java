@@ -18,5 +18,10 @@ public class MultiplicationGroup implements Group<Double> {
         }
         return 1.0 / a; // Обратный элемент для умножения
     }
+
+    @Override
+    public Double add(Double a, Double b) {
+        throw new UnsupportedOperationException("Операция сложения не поддерживается в группе умножения");
+    }
 }
 

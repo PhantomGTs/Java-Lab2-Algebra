@@ -95,7 +95,30 @@ public class Main {
         Integer[][] matrix2 = {{5, 6}, {7, 8}};
         Matrix<Integer> matrixA = new Matrix<>(matrix1, integerRing, Integer.class);
         Matrix<Integer> matrixB = new Matrix<>(matrix2, integerRing, Integer.class);
-        Matrix<Integer> matrixC = matrixA.multiply(matrixB);
+
+
+        // Выполняем умножение матриц
+        Matrix<Integer> matrixProduct = matrixA.multiply(matrixB);
+
+        // Вывод результатов
+        System.out.println("Матрица А * Матрица Б:");
+        for (Integer[] row : matrixProduct.getElements()) {
+            for (Integer element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+
+        // Выполняем сложение матриц
+        Matrix<Integer> matrixSum = matrixA.add(matrixB);
+
+        System.out.println("Матрица А + Матрица Б:");
+        for (Integer[] row : matrixSum.getElements()) {
+            for (Integer element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
 
 
         // 3.4 Реализация полинома над кольцами
@@ -105,15 +128,7 @@ public class Main {
         Polynomial<Integer> polynomialB = new Polynomial<>(poly2, integerRing);
         Polynomial<Integer> polynomialC = polynomialA.multiply(polynomialB);
 
-        // Вывод результатов
-        System.out.println("Матрица А * Матрица Б:");
-        for (Integer[] row : matrixC.getElements()) {
-            for (Integer element : row) {
-                System.out.print(element + " ");
-            }
-            System.out.println();
-        }
-
+        // Вывод результатов полиномов
         System.out.println("Полином А * Полином Б: " + polynomialC.getCoefficients());
 
         System.out.println("\n=== Преобразование ===");
@@ -137,7 +152,6 @@ public class Main {
         // Вывод коэффициентов полинома
         System.out.println("Полином, полученный из матрицы A: " + convertedPolynomialA.getCoefficients());
         printPolynomial(convertedPolynomialA.getCoefficients());
-
     }
 
     // Вывод палинома
@@ -159,16 +173,3 @@ public class Main {
         System.out.println();
     }
 }
-
-/*
-* 1. Сделать подсчет разницы lab2_v1.FastOperation/lab2_v1.FastPowerBigInteger - DONE
-* 2. Сделать так, чтобы можно было поставить полином в матрицу и матрицу в полином lab2_v1.Polynomial.java - DONE
-* 3. Полином наследуется от матрицы - DONE
-* 3.1 (Под вопросом) в матрице сделать метод какой-нибудь для обратного преобразования - DONE
-* */
-
-/*
-* 4. Матрица не должна существовать сама по себе
-*
-* */
-

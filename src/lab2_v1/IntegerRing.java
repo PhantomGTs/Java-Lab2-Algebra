@@ -15,5 +15,10 @@ public class IntegerRing implements Monoid<Integer>, Group<Integer> {
     public Integer inverse(Integer a) {
         return -a;
     }
+
+    @Override
+    public Integer add(Integer a, Integer b) {
+        return a + b; // Операция сложения
+    }
 }
 

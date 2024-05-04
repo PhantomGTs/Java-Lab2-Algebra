@@ -2,6 +2,7 @@ package lab2_v1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.reflect.Array; // Import Array class from java.lang.reflect
 
 public class Matrix<T> {
     private T[][] elements; // Матрица элементов
@@ -22,7 +23,7 @@ public class Matrix<T> {
 
     // Создание массива заданного размера
     private T[][] createArray(int rows, int cols, Class<T> clazz) {
-        return (T[][]) java.lang.reflect.Array.newInstance(clazz, rows, cols);
+        return (T[][]) Array.newInstance(clazz, rows, cols); // Fix: Import Array class and use it here
     }
 
     // Получение элементов матрицы
@@ -63,7 +64,6 @@ public class Matrix<T> {
         return new Matrix<>(result, ring, (Class<T>) this.elements[0][0].getClass());
     }
 
-
     // Метод для преобразования полинома в матрицу
     public Polynomial<T> toPolynomial() {
         // Пункт 1
@@ -87,10 +87,18 @@ public class Matrix<T> {
         }
     }
 
+    // Сложение матриц
+    public Matrix<T> add(Matrix<T> other) {
+        T[][] resultElements = createArray(elements.length, elements[0].length, (Class<T>) elements[0][0].getClass());
 
-    /* toPolynomial
-     * 1. Создается новый список polyCoefficients, который будет содержать коэффициенты полинома.
-     * 2. В цикле происходит итерация по элементам матрицы elements. При этом берется элемент с индексом i из каждой строки и добавляется в список polyCoefficients в качестве коэффициента.
-     * 3. Создается новый объект полинома, используя полученные коэффициенты и кольцо ring, и возвращается в качестве результата.
-     * */
+        for (int i = 0; i < elements.length; i++) {
+            for (int j = 0; j < elements[0].length; j++) {
+                resultElements[i][j] = ring.add(elements[i][j], other.elements[i][j]);
+            }
+        }
+
+        return new Matrix<>(resultElements, ring, (Class<T>) elements[0][0].getClass());
+    }
 }
+
+// public Matrix<T> add(Matrix<T> other) сделать через группу.
