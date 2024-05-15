@@ -63,4 +63,12 @@ public class Matrix<T> {
             System.out.println();
         }
     }
+
+    public void setSubmatrix(int startRow, int startCol, Matrix<T> submatrix) {
+        for (int i = 0; i < submatrix.data.length; i++) {
+            for (int j = 0; j < submatrix.data[0].length; j++) {
+                data[startRow + i][startCol + j] = submatrix.data[i][j];
+            }
+        }
+    }
 }
