@@ -27,7 +27,7 @@ public class Matrix<T> {
 
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[0].length; j++) {
-                result.data[i][j] = ring.addition(data[i][j], other.data[i][j]);
+                result.data[i][j] = ring.add(data[i][j], other.data[i][j]); // Исправлено
             }
         }
 
@@ -45,7 +45,7 @@ public class Matrix<T> {
             for (int j = 0; j < result.data[0].length; j++) {
                 T sum = ring.getZero();
                 for (int k = 0; k < data[0].length; k++) {
-                    sum = ring.addition(sum, ring.multiplication(data[i][k], other.data[k][j]));
+                    sum = ring.add(sum, ring.multiply(data[i][k], other.data[k][j]));
                 }
                 result.data[i][j] = sum;
             }
@@ -53,6 +53,7 @@ public class Matrix<T> {
 
         return result;
     }
+
 
     public void printMatrix() {
         for (int i = 0; i < data.length; i++) {
@@ -63,4 +64,3 @@ public class Matrix<T> {
         }
     }
 }
-

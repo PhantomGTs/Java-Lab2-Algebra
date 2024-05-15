@@ -8,17 +8,14 @@ public class IntegerGroup extends AbstractGroup<Integer> {
         this.value = value;
     }
 
-    @Override
     public Integer binaryOperation(Integer other) {
         return this.value + other;
     }
 
-    @Override
     public Integer neutralElement() {
         return 0;
     }
 
-    @Override
     public Integer inverseElement() {
         return -this.value;
     }

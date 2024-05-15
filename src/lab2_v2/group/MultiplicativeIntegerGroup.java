@@ -1,6 +1,7 @@
 package lab2_v2.group;
 
 import lab2_v2.monoid.*;
+
 public class MultiplicativeIntegerGroup extends AbstractGroup<IntegerMonoid> {
     private IntegerMonoid value;
 
@@ -10,7 +11,7 @@ public class MultiplicativeIntegerGroup extends AbstractGroup<IntegerMonoid> {
 
     @Override
     public IntegerMonoid binaryOperation(IntegerMonoid other) {
-        return new IntegerMonoid(this.value.binaryOperation(other.getValue()));
+        return new IntegerMonoid(this.value.getValue() * other.getValue());
     }
 
     @Override

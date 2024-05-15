@@ -8,17 +8,17 @@ public class AdditiveIntegerGroup extends AbstractGroup<IntegerMonoid> {
         this.value = new IntegerMonoid(value);
     }
 
-    @Override
     public IntegerMonoid binaryOperation(IntegerMonoid other) {
         return new IntegerMonoid(this.value.getValue() + other.getValue());
     }
+    public IntegerMonoid binaryOperation(IntegerMonoid other, IntegerMonoid other2) {
+        return new IntegerMonoid(other2.getValue() + other.getValue());
+    }
 
-    @Override
     public IntegerMonoid neutralElement() {
         return new IntegerMonoid(0);
     }
 
-    @Override
     public IntegerMonoid inverseElement() {
         return new IntegerMonoid(-this.value.getValue());
     }
